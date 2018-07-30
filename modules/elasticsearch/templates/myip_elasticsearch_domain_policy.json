@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "*"
+        },
+        "Action": [
+          "es:*"
+        ],
+        "Condition": {
+          "IpAddress": {
+            "aws:SourceIp": [
+              "86.31.243.47"
+            ]
+          }
+        },
+        "Resource": "arn:aws:es:eu-west-1:251653548180:domain/testapp-dev/*"
+      }
+    ]
+  }
